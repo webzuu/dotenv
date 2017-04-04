@@ -1,5 +1,5 @@
 <?php
-namespace Zuu;
+namespace Zuu\Dotenv;
 
 use Dotenv\Dotenv as OriginalDotenv;
 

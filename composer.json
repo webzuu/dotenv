@@ -3,12 +3,13 @@
     "type": "package",
     "autoload" : {
         "psr-4": {
-            "Zuu\\": "src"
+            "Zuu\\Dotenv\\": "src"
         }
     },
     "require": {
         "vlucas/phpdotenv": "^2.4"
     },
     "require-dev": {
-    }
+    },
+    "minimum-stability": "dev"
 }
