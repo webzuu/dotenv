@@ -1,0 +1,14 @@
+{
+    "name": "webzuu/dotenv",
+    "type": "package",
+    "autoload" : {
+        "psr-4": {
+            "Zuu\\": "src"
+        }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^2.4"
+    },
+    "require-dev": {
+    }
+}
