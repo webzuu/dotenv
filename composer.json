@@ -4,17 +4,15 @@
     "autoload" : {
         "psr-4": {
             "Zuu\\Dotenv\\": "src"
-        }
+        },
+        "files": [
+          "src/helpers.php"
+        ]
     },
     "require": {
         "vlucas/phpdotenv": "^2.4"
     },
     "require-dev": {
-    },
-    "autoload": {
-      "files": [
-        "src/helpers.php"
-      ]
     },
     "minimum-stability": "dev"
 }
