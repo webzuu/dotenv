@@ -47,4 +47,14 @@ class DotenvTest extends TestCase
     $this->assertEquals(__DIR__.'/fixtures/child/path', env_absolute('CHILD_PATH'));
     $this->assertEquals(__DIR__.'/fixtures/path', env_absolute('PARENT_PATH'));
   }
+
+  /** @test **/
+  public function it_returns_false_for_undefined_env_variables()
+  {
+    $dotenv = $this->dotenv();
+    $dotenv->load();
+
+    $this->assertFalse(env('UNDEFINED'));
+    $this->assertFalse(env_absolute('UNDEFINED'));
+  }
 }

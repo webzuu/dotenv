@@ -24,6 +24,10 @@ class Dotenv
   public static function env_absolute($key)
   {
     $envPath = static::env($key);
+
+    if (!isset(static::$map[$key]))
+      return false;
+
     $origin = static::$map[$key];
     return $origin . '/' . $envPath;
   }
