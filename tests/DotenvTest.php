@@ -44,7 +44,7 @@ class DotenvTest extends TestCase
     $dotenv = $this->dotenv();
     $dotenv->load();
 
-    $this->assertEquals(__DIR__.'/fixtures/child/path', platform_path('CHILD_PATH'));
-    $this->assertEquals(__DIR__.'/fixtures/path', platform_path('PARENT_PATH'));
+    $this->assertEquals(__DIR__.'/fixtures/child/path', env_absolute('CHILD_PATH'));
+    $this->assertEquals(__DIR__.'/fixtures/path', env_absolute('PARENT_PATH'));
   }
 }

@@ -10,10 +10,10 @@ if (!function_exists('env')) {
 
 }
 
-if (!function_exists('platform_path')) {
+if (!function_exists('env_absolute')) {
 
-  function platform_path($key) {
-    return Dotenv::platform_path($key);
+  function env_absolute($key) {
+    return Dotenv::env_absolute($key);
   }
 
 }

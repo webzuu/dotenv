@@ -21,7 +21,7 @@ class Dotenv
     return getenv($id);
   }
 
-  public static function platform_path($key)
+  public static function env_absolute($key)
   {
     $envPath = static::env($key);
     $origin = static::$map[$key];
