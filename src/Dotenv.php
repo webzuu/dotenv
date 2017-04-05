@@ -8,7 +8,7 @@ class Dotenv
   protected $directory;
   protected $file;
 
-  public function __construct($directory, $file)
+  public function __construct($directory, $file = '.env')
   {
     $this->directory = $directory;
     $this->file = $file;
