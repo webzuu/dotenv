@@ -11,5 +11,10 @@
     },
     "require-dev": {
     },
+    "autoload": {
+      "classmap": [
+        "src/helpers.php"
+      ]
+    },
     "minimum-stability": "dev"
 }
