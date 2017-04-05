@@ -43,14 +43,15 @@ class Dotenv
       if (file_exists($candidatePath)) {
         $this->map($candidatePath);
         $dotenv = new OriginalDotenv($path, $this->file);
-        $dotenv->overload();
+        $lines = $dotenv->overload();
       }
     }
   }
 
   protected function map($file)
   {
-    $variables = parse_ini_file($file);
+    $loader = new Loader($file);
+    $variables = $loader->read();
     foreach($variables as $key => $value) {
       static::$map[$key] = pathinfo($file, PATHINFO_DIRNAME);
     }
